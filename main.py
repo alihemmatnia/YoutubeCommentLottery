@@ -61,7 +61,11 @@ _\/  \/ \___|_|\___\___/|_|_|_| |_|\___|_  \_/\___/ _   _
                                                                            
 """)
 
-VidId = input("Enter Youtube Video ID : ")
-count = int(input("Enter Count Comment : "))
 
-GetListCommentFromYoutube(VidId, count)
+if(__name__ == "__main__"):
+    try:
+        VidId = input("Enter Youtube Video ID : ")
+        count = int(input("Enter Count Comment : "))
+        GetListCommentFromYoutube(VidId, count)
+    except KeyboardInterrupt:
+        print("\nExiting...")
